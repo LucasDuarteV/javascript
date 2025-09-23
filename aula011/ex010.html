@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="CHECAR" onclick="checar()">
+    <div id="resultado">Resultado: </div>
+    <script>
+        function checar(){
+            var pais = window.document.getElementById('pais').value
+            var resultado = window.document.getElementById('resultado')
+            resultado.innerHTML = ` Seu país é ${pais}`
+            if (pais.toLowerCase() == 'brasil'){
+                resultado.innerHTML += ` Você é brasileiro`
+            }else{
+                resultado.innerHTML = `Você é estrangeiro ${pais}`
+            }
+
+        }
+    </script>
+</body>
+</html>
